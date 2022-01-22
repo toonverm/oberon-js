@@ -195,7 +195,7 @@ export class Orchestra{
 ```
 
 
-#Ruben
+# Ruben
 
 Nu is er nog steeds iets niet ideaal. Vanaf dat de eerste persoon naar de stream luisterd beginnen we te spelen. Zo werkt dat natuurlijk niet in een concert. Stel u voor dat de eerste binnenwandeld en de overture start. Daar heeft het meeste van het publiek niets aan natuurlijk.
 
