@@ -21,8 +21,8 @@ const orchestra = new Orchestra();
 const gp =new GuitarPlayer();
 wss.on('connection', function connection(ws) {
         // orchestra.getMusic()
-        // orchestra.getMusic()
-        gp.playSong(["a","b"])
+        orchestra.getMusic()
+        // gp.playSong(["a","b"])
         .subscribe(n =>
             ws.send(n)
         );

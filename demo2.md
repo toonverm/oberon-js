@@ -92,7 +92,7 @@ we willen weten de hoeveelste keer hij dit nummer speelde (SLIDES)
             )       
     }
 ```
-
+# Toon
 Open “open twee tabs” , we zien nu dat ze niet gelijk speler
 
 Dit komt omdat het nu zogenaamde cold streams zijn.
@@ -165,7 +165,6 @@ share zorgt er voor dat er een hot observable wordt gemaakt
 
 als er 1 iemand geconnecteerd wordt begin de speler te spelen andere subscribers worden op deze live stream omdat die gedeeld is.
 
-# Toon:
 
 Hoewel solo muziekanten bestaan. word meeste muziek wel met meerdere mensen gemaakt.
 
@@ -194,6 +193,9 @@ export class Orchestra{
         return this.music
     }
 ```
+
+
+#Ruben
 
 Nu is er nog steeds iets niet ideaal. Vanaf dat de eerste persoon naar de stream luisterd beginnen we te spelen. Zo werkt dat natuurlijk niet in een concert. Stel u voor dat de eerste binnenwandeld en de overture start. Daar heeft het meeste van het publiek niets aan natuurlijk.
 

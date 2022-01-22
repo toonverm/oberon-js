@@ -15,21 +15,23 @@ import {
 } from "rxjs";
 
 
+
+
 export class GuitarPlayer {
     private play: Observable<string>;
 
     constructor() {
-        const songOne = ["G","A","B","G"];
-        const songTwo = ["B", "C","D"];
-        const playTwoSong$  = concat(this.playSong(songOne), this.playSong(songTwo));
+        const songOne = ["G", "A", "B", "G"];
+        const songTwo = ["B", "C", "D"];
+        const playTwoSong$ = concat(this.playSong(songOne), this.playSong(songTwo));
         this.play = range(10)
             .pipe(
-                concatMap(i => playTwoSong$.pipe(delay(3000),map(n => n+i) )),
+                concatMap(i => playTwoSong$.pipe(delay(3000), map(n => n + i))),
                 share()
             )
     }
 
-    public playSong(notes:string[]){
+    public playSong(notes: string[]) {
         return interval(500)
             .pipe(
                 map(i => notes[i]),
@@ -37,7 +39,7 @@ export class GuitarPlayer {
             )
     }
 
-    public listenToMePlay():Observable<string> {
+    public listenToMePlay(): Observable<string> {
         return this.play;
     }
 
@@ -75,7 +77,12 @@ export class GuitarPlayer {
         const isWrong = Math.round(Math.random() * 2) === 0;
         if (isWrong) throw new Error("KLABANG!");
     }
-
+    public testing(){
+        return from(["A","b","c","d"])
+            .pipe(
+                
+            )
+    }
     public werkendErrorDing_MaarMoeilijk() {
         const notes = ["C", "D", "E", "C"];
         const otherSong = ['F', 'G', 'A'];
@@ -146,11 +153,11 @@ export class GuitarPlayer {
         //         concatMap(n => of(n).pipe(delay(1000)))
         //     )
 
-        return timer(0,500)
-           .pipe(
-               map(i => notes[i%notes.length]),
-               take(notes.length)
-           )
+        return timer(0, 500)
+            .pipe(
+                map(i => notes[i % notes.length]),
+                take(notes.length)
+            )
     }
 
 
