@@ -1,4 +1,13 @@
-import { concat, from, map, Observable, repeat, take, zip } from "rxjs";
+import {
+  catchError,
+  concat,
+  from,
+  map,
+  Observable,
+  repeat,
+  take,
+  zip,
+} from "rxjs";
 
 export class GuitarPlayer {
   private play: Observable<string>;
@@ -23,7 +32,8 @@ export class GuitarPlayer {
           throw new Error("helahola");
         }
         return t;
-      })
+      }),
+      catchError((err, caught) => caught)
     );
   }
 }

@@ -1,5 +1,4 @@
 import {
-  catchError,
   interval,
   map,
   merge,
@@ -49,7 +48,7 @@ export class Orchestra {
       this.playerTwo
         .listenToMePlay(this.metronoom)
         .pipe(map((n) => "PLAYER TWO: " + n))
-    ).pipe(catchError((err, caught) => caught));
+    );
   }
 
   getMusic() {
